@@ -5,7 +5,7 @@ const ApkReader = require('adbkit-apkreader')
 var cheerio = require('cheerio');
 var superagent = require('superagent');
 
-// var dbapi = require('./mongodb/dbapi');
+var dbapi = require('./mongodb/dbapi');
 
 
 // ApkReader.open('/Users/wony/Downloads/360App/通讯类/微信 6.5.10.apk')
@@ -75,7 +75,7 @@ superagent.get('https://developer.android.google.cn/reference/android/Manifest.p
 
                     manifestPermissions.push(permission);
 
-                    // dbapi.insertPermissionInfo(permission);
+                    dbapi.insertPermissionInfo(permission);
 
                     return this;
                 }
