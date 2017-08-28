@@ -1,6 +1,10 @@
 
 var mongoose = require('mongoose');
-var DB_URL = 'mongodb://localhost:27017/manifestPermissions';
+mongoose.Promise = require('bluebird');
+
+// var DB_URL = 'mongodb://localhost:27017/manifestPermissions';
+var DB_URL = 'mongodb://localhost:27017/test';
+
 
 mongoose.connect(DB_URL);
 
